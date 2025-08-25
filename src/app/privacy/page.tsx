@@ -1,8 +1,9 @@
 import React from "react"
+import Link from "next/link"
 import { Metadata } from "next"
 import { Separator } from "@/components/ui/separator"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Shield, Database, Globe, Lock, Users } from "lucide-react"
+import { Shield, Database, Globe, Lock, Users, ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Privacy Policy — Mealy",
@@ -16,6 +17,17 @@ export default function PrivacyPage() {
       {/* Header */}
       <div className="bg-white border-b border-slate-200">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
+          {/* Back Button */}
+          <div className="mb-8">
+            <Link 
+              href="/" 
+              className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors"
+            >
+              <ArrowLeft className="size-4" />
+              <span className="text-sm font-medium">Back</span>
+            </Link>
+          </div>
+          
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-slate-900">Privacy Policy</h1>
             <p className="mt-4 text-lg text-slate-600">
