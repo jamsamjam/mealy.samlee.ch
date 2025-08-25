@@ -38,8 +38,8 @@ export default function TermsPage() {
             <CardTitle className="flex items-center gap-3"><FileText className="size-6 text-emerald-600"/> Agreement to Terms</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p className="text-slate-700">By downloading, accessing, or using Mealy (the “App” or “Service”), you agree to these Terms & Conditions (the “Terms”). If you do not agree, do not use the Service.</p>
-            <p className="text-slate-700">These Terms form a binding agreement between you and the operator of Mealy ("we", "us").</p>
+            <p className="text-slate-700">By downloading, accessing, or using Mealy (the &quot;App&quot; or &quot;Service&quot;), you agree to these Terms &amp; Conditions (the &quot;Terms&quot;). If you do not agree, do not use the Service.</p>
+            <p className="text-slate-700">These Terms form a binding agreement between you and the operator of Mealy (&quot;we&quot;, &quot;us&quot;).</p>
           </CardContent>
         </Card>
 
@@ -63,7 +63,7 @@ export default function TermsPage() {
             <p className="text-slate-700">We grant you a limited, non‑exclusive, non‑transferable license to use the App for personal, non‑commercial purposes in accordance with these Terms.</p>
             <ul className="list-disc pl-6 text-slate-700 space-y-2">
               <li>Do not reverse‑engineer, modify, or redistribute the App except where permitted by law.</li>
-              <li>Do not use the Service for unlawful activity or to infringe others’ rights.</li>
+              <li>Do not use the Service for unlawful activity or to infringe others&apos; rights.</li>
               <li>Do not attempt to access non‑public features, systems, or data.</li>
             </ul>
           </CardContent>
@@ -106,7 +106,7 @@ export default function TermsPage() {
             <CardTitle className="flex items-center gap-3"><Scale className="size-6 text-emerald-600"/> Limitation of Liability & Warranties</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p className="text-slate-700">The Service is provided “as is” and “as available”. To the maximum extent permitted by law, we disclaim warranties of merchantability, fitness for a particular purpose, and non‑infringement.</p>
+            <p className="text-slate-700">The Service is provided &quot;as is&quot; and &quot;as available&quot;. To the maximum extent permitted by law, we disclaim warranties of merchantability, fitness for a particular purpose, and non‑infringement.</p>
             <p className="text-slate-700">To the extent permitted by law, we will not be liable for indirect, incidental, special, consequential, or punitive damages, or any loss of data, profits, or revenues arising from your use of the Service.</p>
           </CardContent>
         </Card>

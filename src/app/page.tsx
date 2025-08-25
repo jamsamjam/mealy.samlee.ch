@@ -2,11 +2,10 @@
 
 import React from "react"
 import { motion } from "framer-motion"
-import { Apple, BadgeCheck, BarChart3, CalendarDays, Camera, ChevronRight, Database, Github, Image as ImageIcon, Lock, PlusCircle, Settings2, Sparkles, TrendingUp, UploadCloud, User, Utensils } from "lucide-react"
+import { Apple, BadgeCheck, BarChart3, CalendarDays, Camera, ChevronRight, Database, Image as ImageIcon, Lock, Settings2, TrendingUp, Utensils } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Badge } from "@/components/ui/badge"
 
 export default function MealyLanding() {
   return (
@@ -41,7 +40,7 @@ export default function MealyLanding() {
               transition={{ duration: 0.6 }}
               className="text-4xl sm:text-5xl font-extrabold tracking-tight"
             >
-              Nutrition tracking that’s <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">accurate</span> & effortless.
+              Nutrition tracking that&apos;s <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">accurate</span> &amp; effortless.
             </motion.h1>
             <p className="mt-4 text-lg text-slate-600">
               Mealy helps you log meals fast, analyze nutrition with official MyPlate methodology, and hit your goals with confidence.
@@ -110,11 +109,11 @@ export default function MealyLanding() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <FeatureCard icon={<Utensils className="size-5"/>} title="Meal Logging" desc="Search USDA foods, set portions by grams, add notes & photos."/>
+            <FeatureCard icon={<Utensils className="size-5"/>} title="Meal Logging" desc="Search USDA foods, set portions by grams, add notes &amp; photos."/>
             <FeatureCard icon={<ImageIcon className="size-5"/>} title="Photo Capture" desc="Camera & gallery with persistent, optimized storage."/>
             <FeatureCard icon={<CalendarDays className="size-5"/>} title="Calendar" desc="Monthly overview, daily details, edit or delete with confirmation."/>
             <FeatureCard icon={<BarChart3 className="size-5"/>} title="Analytics" desc="Daily targets vs intake, weekly averages, trends, dynamic insights."/>
-            <FeatureCard icon={<Settings2 className="size-5"/>} title="Profile & Goals" desc="Age, height, weight, activity, pregnancy/lactation adjustments."/>
+            <FeatureCard icon={<Settings2 className="size-5"/>} title="Profile &amp; Goals" desc="Age, height, weight, activity, pregnancy/lactation adjustments."/>
             <FeatureCard icon={<Database className="size-5"/>} title="Accurate Targets" desc="DRI EER formulas + official MyPlate methodology implementation."/>
           </div>
 
@@ -142,10 +141,10 @@ export default function MealyLanding() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <h3 className="text-2xl font-semibold">See your progress at a glance</h3>
-            <p className="mt-2 text-slate-600">Daily calories, macros, and week-over-week trends. Color-coded bars show where you’re on target and where to adjust.</p>
+            <p className="mt-2 text-slate-600">Daily calories, macros, and week-over-week trends. Color-coded bars show where you&apos;re on target and where to adjust.</p>
             <ul className="mt-4 space-y-2 text-slate-700">
               <li className="flex items-center gap-2"><BadgeCheck className="size-4 text-emerald-600"/> Auto-refresh on screen focus</li>
-              <li className="flex items-center gap-2"><BadgeCheck className="size-4 text-emerald-600"/> Weekly averages & meal counts</li>
+              <li className="flex items-center gap-2"><BadgeCheck className="size-4 text-emerald-600"/> Weekly averages &amp; meal counts</li>
               <li className="flex items-center gap-2"><BadgeCheck className="size-4 text-emerald-600"/> Insights based on real data</li>
             </ul>
           </div>
@@ -175,7 +174,7 @@ export default function MealyLanding() {
               <a href="#" aria-label="Google Play coming soon"><ImageIcon className="mr-2 size-5"/> Google Play (soon)</a>
             </Button>
           </div>
-          <p className="mt-3 text-xs text-slate-500">Let us know if you'd like to join our Android beta testing program.</p>
+          <p className="mt-3 text-xs text-slate-500">Let us know if you&apos;d like to join our Android beta testing program.</p>
         </div>
       </section>
 
@@ -185,7 +184,7 @@ export default function MealyLanding() {
           <Card className="rounded-2xl">
             <CardHeader>
               <CardTitle>Get launch updates</CardTitle>
-              <CardDescription>No spam. We'll only email you once it's available on Google Play Store.</CardDescription>
+              <CardDescription>No spam. We&apos;ll only email you once it&apos;s available on Google Play Store.</CardDescription>
             </CardHeader>
             <CardContent>
               <form className="flex flex-col sm:flex-row gap-3">
