@@ -1,12 +1,8 @@
-// app/privacy/page.tsx
-// Mealy Privacy Policy page for Next.js App Router
-// Tailwind + shadcn/ui. Replace placeholders (email/domain) before deploying.
-
 import React from "react"
 import { Metadata } from "next"
 import { Separator } from "@/components/ui/separator"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Shield, Database, Eye, Lock } from "lucide-react"
+import { Shield, Database, Globe, Lock, Users } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Privacy Policy — Mealy",
@@ -48,139 +44,93 @@ export default function PrivacyPage() {
           </CardContent>
         </Card>
 
-        {/* Data Collection */}
+        {/* Your Data */}
         <Card className="rounded-2xl border-slate-200">
           <CardHeader>
             <CardTitle className="flex items-center gap-3">
               <Database className="size-6 text-emerald-600" />
-              Data we collect
+              Your Data
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
-              <h3 className="font-semibold text-slate-900 mb-3">Data you store locally</h3>
+              <h3 className="font-semibold text-slate-900 mb-3">What stays on your device</h3>
               <ul className="space-y-2 text-slate-700">
                 <li>• Meal logs (foods, portions, notes)</li>
                 <li>• Photos you attach to meals</li>
-                <li>• Profile and goal settings (age, height, weight, activity level, pregnancy/lactation status)</li>
-                <li>• Preferences (units, notifications, theme)</li>
+                <li>• Profile settings (age, height, weight, activity level)</li>
+                <li>• App preferences (units, notifications, theme)</li>
               </ul>
               <p className="mt-4 text-sm text-slate-600 bg-slate-50 p-4 rounded-lg">
-                This information remains on your device. Mealy reads/writes it using the operating system's secure
-                storage (AsyncStorage). You can export your data as JSON from the app.
+                <strong>Local-first approach:</strong> This data stays on your device using secure storage. You can export it as JSON anytime. Deleted when you uninstall the app.
               </p>
             </div>
 
             <Separator />
 
             <div>
-              <h3 className="font-semibold text-slate-900 mb-3">Data you provide to us</h3>
+              <h3 className="font-semibold text-slate-900 mb-3">What we may collect</h3>
               <ul className="space-y-3 text-slate-700">
                 <li>
-                  <strong>Email address</strong> — only if you sign up for launch updates or beta testing. We use it to
-                  send product emails (e.g., when Android is available) and operational notices.
+                  <strong>Email address</strong> — only if you sign up for updates. Kept until you unsubscribe.
                 </li>
                 <li>
-                  <strong>Support messages</strong> — if you contact us, we may keep your message to help resolve the issue.
+                  <strong>Support messages</strong> — if you contact us for help.
+                </li>
+                <li>
+                  <strong>Crash reports</strong> — minimal diagnostics to fix bugs (excludes personal data).
                 </li>
               </ul>
-            </div>
-
-            <Separator />
-
-            <div>
-              <h3 className="font-semibold text-slate-900 mb-3">Automatically collected information</h3>
-              <p className="text-slate-700">
-                We may collect minimal, privacy‑preserving diagnostics (e.g., crash reports) to improve reliability.
-                When enabled, these reports exclude meal contents and personal metrics.
-              </p>
             </div>
           </CardContent>
         </Card>
 
-        {/* How we use information */}
+        {/* Third-party Services */}
         <Card className="rounded-2xl border-slate-200">
           <CardHeader>
             <CardTitle className="flex items-center gap-3">
-              <Eye className="size-6 text-emerald-600" />
-              How we use information
+              <Globe className="size-6 text-emerald-600" />
+              Third-party Services
             </CardTitle>
           </CardHeader>
-          <CardContent>
-            <ul className="space-y-2 text-slate-700">
-              <li>• Provide and maintain the app and its features</li>
-              <li>• Respond to support requests and communicate about updates you opted into</li>
-              <li>• Improve performance, reliability, and usability</li>
-            </ul>
+          <CardContent className="space-y-4">
+            <div>
+              <p className="font-semibold text-slate-900">USDA FoodData Central</p>
+              <p className="text-slate-700">We query their API to fetch nutrition data. Only food search terms are sent, not your meal history or profile.</p>
+            </div>
+            <div>
+              <p className="font-semibold text-slate-900">Service providers</p>
+              <p className="text-slate-700">Email and crash reporting services process data on our behalf under confidentiality agreements.</p>
+            </div>
           </CardContent>
         </Card>
 
-        {/* Sharing and Security */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="rounded-2xl border-slate-200">
-            <CardHeader>
-              <CardTitle className="text-lg">Sharing and third parties</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4 text-sm">
-              <div>
-                <p className="font-semibold text-slate-900 mb-2">We do not sell personal data.</p>
-              </div>
-              <div>
-                <p className="font-semibold text-slate-900">USDA FoodData Central:</p>
-                <p className="text-slate-700">We query their API to fetch nutrition data. Requests may include
-                food search terms and pagination info, but not your profile or meal history.</p>
-              </div>
-              <div>
-                <p className="font-semibold text-slate-900">Service providers:</p>
-                <p className="text-slate-700">If we use email or crash reporting vendors, they will process data on
-                our behalf under confidentiality agreements and only for the stated purposes.</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-2xl border-slate-200">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-lg">
-                <Lock className="size-5 text-emerald-600" />
-                Security
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm">
+        {/* Security & Your Rights */}
+        <Card className="rounded-2xl border-slate-200">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3">
+              <Lock className="size-6 text-emerald-600" />
+              Security & Your Rights
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div>
+              <h3 className="font-semibold text-slate-900 mb-3">Security</h3>
               <p className="text-slate-700">
-                We follow industry best practices to protect data. However, no method of transmission or storage is 100%
-                secure. Keep your device and backups protected with a passcode and OS security features.
+                We follow industry best practices to protect data. Keep your device secure with a passcode and OS security features.
               </p>
-            </CardContent>
-          </Card>
-        </div>
+            </div>
 
-        {/* Additional Sections */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="rounded-2xl border-slate-200">
-            <CardHeader>
-              <CardTitle className="text-lg">Your rights</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm">
-              <p className="text-slate-700">
-                Depending on your location (e.g., EU/EEA under GDPR, California under CCPA/CPRA), you may have rights to
-                access, correct, export, or delete your personal data, and to object or restrict certain processing.
-                To exercise rights, contact us using the details below.
-              </p>
-            </CardContent>
-          </Card>
+            <Separator />
 
-          <Card className="rounded-2xl border-slate-200">
-            <CardHeader>
-              <CardTitle className="text-lg">Data retention</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm">
+            <div>
+              <h3 className="font-semibold text-slate-900 mb-3">Your rights</h3>
               <p className="text-slate-700">
-                Local data stays on your device until you delete it (via in‑app deletion, uninstall, or OS settings).
-                If you subscribed with an email, we keep it until you unsubscribe or request deletion.
+                You may have rights to access, correct, export, or delete your personal data (GDPR, CCPA). Contact us below to exercise these rights.
               </p>
-            </CardContent>
-          </Card>
-        </div>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Contact */}
         <Card className="rounded-2xl border-slate-200 bg-emerald-50">
@@ -193,20 +143,8 @@ export default function PrivacyPage() {
               className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold" 
               href="mailto:privacy@mealy.app"
             >
-              privacy@mealy.app
+              hello@mealy.samlee.ch
             </a>
-          </CardContent>
-        </Card>
-
-        {/* Roadmap Note */}
-        <Card className="rounded-2xl border-slate-200 bg-blue-50">
-          <CardContent className="p-6">
-            <h3 className="font-semibold text-slate-900 mb-2">Roadmap: Optional cloud sync</h3>
-            <p className="text-sm text-slate-700">
-              We are exploring an optional cloud sync to enable multi‑device access. If introduced, it will be opt‑in
-              and accompanied by a dedicated data processing notice detailing what is synced, where it is stored, and
-              how you can control it.
-            </p>
           </CardContent>
         </Card>
       </div>
