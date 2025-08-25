@@ -2,11 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  images: { 
-    unoptimized: true 
-  },
   trailingSlash: true,
-  skipTrailingSlashRedirect: true,
+  reactStrictMode: false,
+  images: {
+    domains: ['mealy.samlee.ch'],
+  },
 };
 
 export default nextConfig;
